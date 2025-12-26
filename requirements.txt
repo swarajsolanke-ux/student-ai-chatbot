@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+langgraph
+langchain
+chromadb
+ollama
+python-multipart
+bcrypt==5.0.0
+sqlite-utils
+pdfplumber
+pydantic
