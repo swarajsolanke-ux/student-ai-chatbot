@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Recommendation Platform - Find Your Perfect University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/landing.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" fill="url(#grad1)"/>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" fill="url(#grad2)"/>
+                    <defs>
+                        <linearGradient id="grad1" x1="3" y1="4" x2="21" y2="14">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="5" y1="10" x2="19" y2="20">
+                            <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">University Recommander</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#services">Services</a>
+                <a href="/login" class="btn-secondary">Login</a>
+                <a href="/register" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="badge">🎓 AI-Powered Education Platform</div>
+                <h1 class="hero-title">
+                    Find Your Perfect <span class="gradient-text">University</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover universities tailored to your strengths, aspirations, and budget with our advanced AI recommendation system. From assessment to admission, we guide you every step of the way.
+                </p>
+                <div class="hero-cta">
+                    <a href="/register" class="btn-hero-primary">
+                        Start Your Journey
+                        <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn-hero-secondary">
+                        Learn More
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Universities</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="mockup-card card-1">
+                    <div class="card-header">
+                        <span class="card-icon"></span>
+                        <span>AI Assessment</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="card-text">Analyzing your strengths...</div>
+                </div>
+                <div class="mockup-card card-2">
+                    <div class="card-header">
+                        <span class="card-icon"></span>
+                        <span>Top Match</span>
+                    </div>
+                    <div class="university-preview">
+                        <div class="uni-name">MIT</div>
+                        <div class="match-score">98% Match</div>
+                    </div>
+                </div>
+                <div class="mockup-card card-3">
+                    <div class="card-header">
+                        <span class="card-icon"></span>
+                        <span>Scholarship</span>
+                    </div>
+                    <div class="scholarship-amount">$15,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features for Your Success</h2>
+                <p class="section-subtitle">Everything you need to find and apply to your dream university</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Assessment</h3>
+                    <p>Complete comprehensive tests to discover your personality, strengths, and ideal majors</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Smart Recommendations</h3>
+                    <p>Get personalized university matches based on your profile, GPA, and budget</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Advanced Search</h3>
+                    <p>Filter universities by country, major, tuition, language, and scholarships</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>University Comparison</h3>
+                    <p>Compare multiple universities side-by-side to make informed decisions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Application Management</h3>
+                    <p>Submit applications, track status, and receive real-time notifications</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3>Scholarship Finder</h3>
+                    <p>Discover and apply for scholarships that match your eligibility</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>Student Services</h3>
+                    <p>Access exclusive deals on cars, banking, telecom, and travel</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Premium Features</h3>
+                    <p>Unlock advanced AI guidance, priority applications, and expert consultation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Your journey to the perfect university in 4 simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Your Profile</h3>
+                        <p>Sign up and complete your student profile with your goals and preferences</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Take AI Assessment</h3>
+                        <p>Complete personality and academic tests to discover your strengths and ideal majors</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get Recommendations</h3>
+                        <p>Receive personalized university and scholarship recommendations powered by AI</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Apply & Track</h3>
+                        <p>Submit applications, upload documents, and track your admission status in real-time</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-section">
+                <a href="/register" class="btn-large">Start Your Journey Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Student Services</h2>
+                <p class="section-subtitle">Exclusive deals and services for students</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Cars</h3>
+                    <p>Special discounts on student-friendly vehicles</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏦</div>
+                    <h3>Banking</h3>
+                    <p>Student accounts with zero fees and benefits</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Telecom</h3>
+                    <p>Affordable data plans and student packages</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3>Travel</h3>
+                    <p>Student flight deals and visa assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-name">UniMatch</div>
+                    <p>Your AI-powered guide to university success</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#services">Services</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Account</h4>
+                        <a href="/register">Sign Up</a>
+                        <a href="/login">Login</a>
+                        <a href="/dashboard">Dashboard</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UniMatch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/landing.js"></script>
+</body>
+</html>

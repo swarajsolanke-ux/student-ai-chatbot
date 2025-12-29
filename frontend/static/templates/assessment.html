@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assessment - University Recommander</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/assessment.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/dashboard" class="back-btn">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg>
+                Back to Dashboard
+            </a>
+            <h1>AI Career Assessment</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Assessment Progress -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="currentStep">Step 1</span> of <span id="totalSteps">6</span>
+            </div>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container" id="chatContainer">
+            <div class="welcome-message">
+                <div class="ai-avatar">🤖</div>
+                <div class="message-bubble ai-message">
+                    <h2>Welcome to Your AI Career Assessment!</h2>
+                    <p>I'll ask you a series of questions to understand your personality, strengths, and career
+                        preferences. This will help me recommend the best university majors for you.</p>
+                    <p>Let's get started!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea id="userInput" placeholder="Type your answer here..." rows="1" disabled></textarea>
+                <button id="sendBtn" class="send-btn" disabled>
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="quick-actions" id="quickActions"></div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div class="modal" id="resultsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Personalized Major Recommendations</h2>
+                <button class="close-btn" onclick="closeResults()">×</button>
+            </div>
+            <div class="modal-body" id="resultsContent">
+                <!-- Results will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeResults()">Close</button>
+                <button class="btn-primary" onclick="viewUniversities()">Find Universities</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/assessment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - University Recommander</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-text">University Recommander</span>
+            </div>
+            <div class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/profile" class="nav-link">Profile</a>
+                <a href="/settings" class="nav-link active">Settings</a>
+            </div>
+            <div class="nav-actions">
+                <div class="user-menu">
+                    <button class="user-btn" id="userBtn">
+                        <div class="avatar">
+                            <span id="userInitial">U</span>
+                        </div>
+                    </button>
+                    <div class="dropdown" id="userDropdown">
+                        <a href="/profile">Profile</a>
+                        <a href="/settings">Settings</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>Settings</h1>
+            <p>Manage your account settings and preferences</p>
+        </div>
+
+        <div class="profile-grid">
+            <!-- Account Settings -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Account Settings</h2>
+                </div>
+                <div class="settings-section">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Email Address</h3>
+                            <p id="currentEmail">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Phone Number</h3>
+                            <p id="currentPhone">Not set</p>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Account Type</h3>
+                            <p id="accountType">Free Account</p>
+                        </div>
+                        <button class="btn-primary" id="upgradePremiumBtn">Upgrade to Premium</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Change Password -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Change Password</h2>
+                </div>
+                <form id="changePasswordForm" class="profile-form">
+                    <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password" id="currentPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" id="newPassword" minlength="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm New Password</label>
+                        <input type="password" id="confirmNewPassword" minlength="8" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Update Password</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Notification Preferences -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Notification Preferences</h2>
+                </div>
+                <div class="settings-section">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Email Notifications</h3>
+                            <p>Receive updates via email</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="emailNotifications" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Application Updates</h3>
+                            <p>Notify me about application status changes</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="applicationNotifications" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>University Recommendations</h3>
+                            <p>Get personalized university suggestions</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="recommendationNotifications" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy & Security -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Privacy & Security</h2>
+                </div>
+                <div class="settings-section">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Download Your Data</h3>
+                            <p>Export all your personal data</p>
+                        </div>
+                        <button class="btn-secondary">Download</button>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Delete Account</h3>
+                            <p>Permanently delete your account and all data</p>
+                        </div>
+                        <button class="btn-danger" id="deleteAccountBtn">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successMessage" class="toast success" style="display: none;"></div>
+    <div id="errorMessage" class="toast error" style="display: none;"></div>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/settings.js"></script>
+</body>
+
+</html>

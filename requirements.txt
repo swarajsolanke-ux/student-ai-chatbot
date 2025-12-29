@@ -6,7 +6,15 @@ langchain
 chromadb
 ollama
 python-multipart
-bcrypt==5.0.0
+bcrypt==4.0.1
 sqlite-utils
 pdfplumber
 pydantic
+python-jose[cryptography]
+aiofiles
+pillow
+httpx
+passlib
+python-dotenv
+langchain-community
+langchain-ollama

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - University Recommander</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-text">University Recommander</span>
+            </div>
+            <div class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/universities" class="nav-link">Universities</a>
+                <a href="/profile" class="nav-link active">Profile</a>
+            </div>
+            <div class="nav-actions">
+                <div class="user-menu">
+                    <button class="user-btn" id="userBtn">
+                        <div class="avatar">
+                            <span id="userInitial">U</span>
+                        </div>
+                    </button>
+                    <div class="dropdown" id="userDropdown">
+                        <a href="/profile">Profile</a>
+                        <a href="/settings">Settings</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>My Profile</h1>
+            <p>Manage your personal information and academic profile</p>
+        </div>
+
+        <div class="profile-grid">
+            <!-- Profile Card -->
+            <div class="profile-card">
+                <div class="profile-avatar-section">
+                    <div class="profile-avatar">
+                        <span id="avatarInitial">U</span>
+                    </div>
+                    <button class="btn-text">Change Photo</button>
+                </div>
+                <div class="profile-info">
+                    <h2 id="profileName">Loading...</h2>
+                    <p id="profileEmail">user@example.com</p>
+                    <div class="profile-badges">
+                        <span class="badge" id="premiumBadge">Free Account</span>
+                        <span class="badge success" id="verifiedBadge" style="display: none;">Verified</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Information Form -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Personal Information</h2>
+                    <button class="btn-edit" id="editPersonalBtn">Edit</button>
+                </div>
+                <form id="personalInfoForm" class="profile-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fullName" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Nationality</label>
+                            <input type="text" id="nationality" disabled>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Date of Birth</label>
+                            <input type="date" id="dateOfBirth" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="phone" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Bio</label>
+                        <textarea id="bio" rows="3" disabled placeholder="Tell us about yourself..."></textarea>
+                    </div>
+                    <div class="form-actions" style="display: none;">
+                        <button type="button" class="btn-secondary" id="cancelPersonalBtn">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Academic Profile Form -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Academic Profile</h2>
+                    <button class="btn-edit" id="editAcademicBtn">Edit</button>
+                </div>
+                <form id="academicProfileForm" class="profile-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>GPA (0-4.0)</label>
+                            <input type="number" id="gpa" step="0.1" min="0" max="4" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Annual Budget (USD)</label>
+                            <input type="number" id="budget" disabled>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Preferred Country</label>
+                            <select id="preferredCountry" disabled>
+                                <option value="">Select a country</option>
+                                <option value="USA">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Netherlands">Netherlands</option>
+                                <option value="Australia">Australia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Major</label>
+                            <input type="text" id="preferredMajor" disabled>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Learning Style</label>
+                            <select id="learningStyle" disabled>
+                                <option value="">Select learning style</option>
+                                <option value="Visual">Visual Learner</option>
+                                <option value="Auditory">Auditory Learner</option>
+                                <option value="Practical">Practical/Hands-on</option>
+                                <option value="Reading">Reading/Writing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Career Goal</label>
+                            <input type="text" id="careerGoal" disabled>
+                        </div>
+                    </div>
+                    <div class="form-actions" style="display: none;">
+                        <button type="button" class="btn-secondary" id="cancelAcademicBtn">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Assessment History -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Assessment History</h2>
+                    <a href="/assessment" class="link-btn">Take New Assessment</a>
+                </div>
+                <div id="assessmentHistory" class="assessment-history">
+                    <p class="empty-state">No assessments completed yet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successMessage" class="toast success" style="display: none;"></div>
+    <div id="errorMessage" class="toast error" style="display: none;"></div>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/profile.js"></script>
+</body>
+
+</html>
