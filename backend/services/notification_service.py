@@ -22,7 +22,7 @@ def create_notification(
     db.commit()
     
     notification_id = cursor.lastrowid
-    print(f"📬 Created notification #{notification_id} for user {user_id}: {title}")
+    print(f" Created notification #{notification_id} for user {user_id}: {title}")
     
     return notification_id
 
@@ -38,7 +38,7 @@ def notify_application_status_change(
         "Under Review": f"Good news! Your application to {university_name} is now under review.",
         "Missing Documents": f"Action required: Your application to {university_name} is missing some documents.",
         "Conditional Offer": f"Congratulations! You have received a conditional offer from {university_name}!",
-        "Final Offer": f"🎉 Congratulations! You have received a final offer from {university_name}!",
+        "Final Offer": f" Congratulations! You have received a final offer from {university_name}!",
         "Rejected": f"Unfortunately, your application to {university_name} was not successful this time."
     }
     

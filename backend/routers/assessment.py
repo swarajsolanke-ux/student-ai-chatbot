@@ -32,6 +32,7 @@ async def evaluate_assessment(
         assessment.answers
     )
     
+    logging.info(f"results :{results}")
     # Store assessment results
     cursor = db.cursor()
     cursor.execute(
@@ -104,7 +105,7 @@ async def get_assessment_results(
         (result_id, user_id)
     )
     result = cursor.fetchone()
-    
+    print(f"result:{result}")
     if not result:
         raise HTTPException(status_code=404, detail="Assessment not found")
     
@@ -129,7 +130,7 @@ async def get_assessment_results(
             "study_duration": row[6],
             "roadmap": json.loads(row[7]) if row[7] else []
         })
-    
+    print(f"recommandadtion list:{recommendations}")
     return {
         "result_id": result[0],
         "personality_type": result[1],

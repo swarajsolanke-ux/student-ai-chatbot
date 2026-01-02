@@ -1,4 +1,4 @@
-// dashboard.js - Dashboard functionality
+
 document.addEventListener('DOMContentLoaded', async () => {
     // Check authentication
     if (!isLoggedIn()) {
@@ -124,7 +124,7 @@ function viewUniversity(id) {
     window.location.href = `/universities/${id}`;
 }
 
-// Load notifications count
+
 async function loadNotifications() {
     try {
         const response = await authenticatedFetch('/notifications');
@@ -139,4 +139,4 @@ async function loadNotifications() {
 }
 
 // Call loadNotifications periodically
-setInterval(loadNotifications, 30000); // Every 30 seconds
+setInterval(loadNotifications, 30000); 

@@ -1,4 +1,4 @@
-# middleware/auth_middleware.py - JWT Authentication Middleware
+from fastapi.responses import HTMLResponse
 from fastapi import HTTPException, Security, Depends, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from jose import jwt, JWTError

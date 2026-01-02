@@ -207,7 +207,10 @@ def get_recommendations(
     
     # Get recommendations
     recommendations = ai_service.recommend_universities(
-        user_id, db, request.preferred_major or "", assessment_results, request.max_results
+        user_id=user_id,
+        preferred_major=request.preferred_major or "",
+        assessment_results=assessment_results,
+        max_results=request.max_results
     )
     
     return RecommendationResponse(

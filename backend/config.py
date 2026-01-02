@@ -27,10 +27,10 @@ class Settings:
     CHROMA_DB_PATH = os.getenv("CHROMA_DB_PATH", "./chroma_db")
     CHROMA_COLLECTION = "university_embeddings"
     
-    # # OTP Settings (Simulated - replace with real SMS service in production)
-    # OTP_EXPIRY_MINUTES = 10
-    # OTP_LENGTH = 6
-    # SMS_PROVIDER = os.getenv("SMS_PROVIDER", "simulated")  # twilio, nexmo, simulated
+    # OTP Settings (Simulated - replace with real SMS service in production)
+    OTP_EXPIRY_MINUTES = 10
+    OTP_LENGTH = 6
+    SMS_PROVIDER = os.getenv("SMS_PROVIDER", "simulated")# twilio, nexmo, simulated
     # TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID", "")
     # TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "")
     # TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER", "")

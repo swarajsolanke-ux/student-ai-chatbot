@@ -236,7 +236,7 @@ async function processAssessment() {
 
     showTypingIndicator();
 
-    addAIMessage("Thank you for completing the assessment! Let me analyze your responses and find the perfect majors for you... 🎯");
+    addAIMessage("Thank you for completing the assessment! Let me analyze your responses and find the perfect majors for you...");
 
     try {
         const response = await authenticatedFetch('/assessment/evaluate', {
@@ -249,6 +249,7 @@ async function processAssessment() {
 
         if (response.ok) {
             const results = await response.json();
+            console.log("results",results)
             hideTypingIndicator();
 
             setTimeout(() => {
@@ -302,7 +303,7 @@ function showResults(results) {
                             <div class="meta-label">Duration</div>
                             <div class="meta-value">${major.study_duration || '3-4 years'}</div>
                         </div>
-                    </div>
+                    </div>f
                     
                     <p><strong>Career Opportunities:</strong> ${major.career_paths}</p>
                     
